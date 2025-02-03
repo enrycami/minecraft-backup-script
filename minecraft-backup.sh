@@ -39,4 +39,13 @@ else
     echo "Backup count is within the limit of $max_backups"
 fi
 
+# wait one minute
+echo "Waiting 10 seconds..."
+sleep 1m
+
+# one-time folder sync using Filen
+echo "Starting cloud sync using Filen."
+filen sync ~/minecraft-backups:twoWay:/minecraft-backups
+echo "Cloud sync completed."
+
 echo "Backup script completed."
